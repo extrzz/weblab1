@@ -1,0 +1,6 @@
+body {
+    margin: auto;
+    /*background: #2e3931;*/
+    background: linear-gradient(45deg, rgba(48, 56, 33, 0.8), rgba(3, 24, 18, 0.93)) no-repeat fixed;
+}
+

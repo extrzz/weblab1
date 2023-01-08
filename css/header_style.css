@@ -1,0 +1,15 @@
+header {
+    background: linear-gradient(3deg, rgba(49, 63, 20, 0.8), rgba(1, 76, 50, 0.93));
+    font-family: "fantasy f", serif;
+    color: #ebeeec;
+    width: 100%;
+    font-size: 50px;
+    text-align: start;
+}
+.head {
+    margin-left: 50px;
+}
+.head::selection{
+    color: burlywood;
+    background: brown;
+}

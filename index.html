@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>lab1</title>
+    <link rel="stylesheet" type = "text/css" href="header_style.css">
+    <link rel="stylesheet" type = "text/css" href="body_style.css">
+    <link rel="stylesheet" type = "text/css" href="main_style.css">
+
+</head>
+<body>
+
+<header>
+    <div>
+        <text class="head">Kharlamov Arseniy P32101 Variant №1419</text>
+    </div>
+</header>
+
+<main>
+    <div class="main_area">
+        <div class="graph">
+            <svg width="300" height="300"  xmlns="http://www.w3.org/2000/svg">
+                <line x1 = "0" x2="300" y1 = "150" y2 ="150" />
+                <line x1 = "150" x2="150" y1 = "0" y2 ="300" />
+
+                <polygon points="300,150 295,146 295, 154" stroke="black"></polygon>
+                <polygon points="150,0 146,5 154, 5" stroke="black"></polygon>
+
+                <polygon points="150,90, 90,150, 150,150" ></polygon>
+
+                <path d="M90 150 A1 0.92, 1, 1 0, 220,150 " />
+
+                <polygon points="150,150, 150,210, 270,210, 270,150"></polygon>
+
+                <line x1 = "153" x2 = "147" y1="90" y2 = "90" />
+                <line x1 = "153" x2 = "147" y1="30" y2 = "30" />
+                <text x="155" y="90">R/2</text>
+                <text x="155" y="30">R</text>
+
+                <line x1 = "153" x2 = "147" y1="210" y2 = "210" />
+                <line x1 = "153" x2 = "147" y1="270" y2 = "270" />
+                <text x="155" y="210">R/2</text>
+                <text x="155" y="270">R</text>
+
+                <line x1 = "90" x2 = "90" y1="153" y2 = "147" />
+                <line x1 = "30" x2 = "30" y1="153" y2 = "147" />
+                <text x="90" y="145">R/2</text>
+                <text x="30" y="145">R</text>
+
+                <line x1 = "210" x2 = "210" y1="153" y2 = "147" />
+                <line x1 = "270" x2 = "270" y1="153" y2 = "147" />
+                <text x="210" y="145">R/2</text>
+                <text x="270" y="145">R</text>
+
+                <text x="155" y="12">Y</text>
+                <text x="288" y="145">X</text>
+            </svg>
+        </div>
+        <form id="form" action="main.php" method="post">
+        <div class="input_elems" >
+            <div class="x_input">
+                <label>Input X: </label>
+                <input id="x-textinput" name="X_value" type="text" maxlength="5" placeholder="(-5;3)">
+            </div>
+            <div class="y_input">
+                <label>Input Y: </label>
+                <input id="y-textinput" name="Y_value" type="text" maxlength="5" placeholder="(-5;5)">
+            </div>
+            <div class="r_input">
+                    <label>Choose R:</label>
+                    <input class="r" name="R_value" type="checkbox" id="r1" value="1" onclick="onlyOne(this);">
+                    <label for="r1">1</label>
+                    <input class="r" name="R_value" type="checkbox" id="r2" value="2" onclick="onlyOne(this);" >
+                    <label for="r2">2</label>
+                    <input class="r" name="R_value" type="checkbox" id="r3" value="3" onclick="onlyOne(this);">
+                    <label for="r3">3</label>
+                    <input class="r" name="R_value" type="checkbox" id="r4" value="4" onclick="onlyOne(this);">
+                    <label for="r4">4</label>
+                    <input class="r" name="R_value" type="checkbox" id="r5" value="5" onclick="onlyOne(this);">
+                    <label for="r5">5</label>
+            </div>
+            <div class="buttons">
+                <input class="button" type="submit" value="Проверить">
+                <input class="button" type="reset" value="Сбросить">
+            </div>
+        </div>
+        </form>
+        <div class="table_elems">
+            <div class="table_clear_button">
+                <input type="submit" class="reset_button" value="Table Reset">
+            </div>
+            <div class ="result_table container">
+                <table id="result_table">
+                    <thead>
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>R</th>
+                            <th>Hit or Miss</th>
+                            <th>Время работы</th>
+                            <th>Текущее время</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+
+</html>
